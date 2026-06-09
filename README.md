@@ -4,7 +4,7 @@
 - Sharana Sabesan
 
 ## Roadmap & Feature Requests
-Canny board: https://cse110-lab10-<your-github-username-here>.canny.io
+Canny board: https://cse110-lab10-sharana-sabesan09.canny.io
 
 ## Notes
 - `index.html` runs a 50/50 A/B test that randomly adds a `blue` class to the
