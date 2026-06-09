@@ -14,6 +14,17 @@
   <!-- Main Stylesheet & Scripts -->
   <link rel="stylesheet" href="assets/styles/global.css" />
   <script src="assets/scripts/partyHorn.js" type="module"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <!-- TODO: replace G-XXXXXXXXXX with the Measurement ID from your own GA4 web stream -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 </head>
 
 <body>
@@ -42,6 +53,23 @@
       <audio class="hidden" src=""></audio>
     </section>
   </main>
+
+  <!-- A/B test: randomly give half of visitors the blue background -->
+  <script>
+    // Generate a random number between 0 and 1
+    const randomNumber = Math.random();
+
+    // Decide whether this visitor gets the blue version
+    const shouldApplyClass = randomNumber < 0.5;
+
+    // Grab the body element
+    let body = document.querySelector('body');
+
+    // Add the "blue" class for half of the visitors
+    if (shouldApplyClass) {
+      body.classList.add('blue');
+    }
+  </script>
 </body>
 
 </html>
